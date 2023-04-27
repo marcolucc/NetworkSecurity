@@ -1,15 +1,6 @@
-# Base image
 FROM alpine:latest
+RUN apk add --no-cache bash netcat-openbsd
 
-# Install necessary packages
-RUN apk add --no-cache curl
-
-# Set environment variables
-ENV SERVER_HOST=server
-ENV SERVER_PORT=5000
-
-# Copy script to send packets continuously
-COPY send_packets.sh /send_packets.sh
-
-# Set the script as the entrypoint
-ENTRYPOINT ["/send_packets.sh"]
+#CMD while true; do echo "Packet sent" | nc -w 1 server 1234; sleep 1; done
+#make the container run forever
+CMD tail -f /dev/null

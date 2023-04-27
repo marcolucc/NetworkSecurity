@@ -1,11 +1,9 @@
-# Base image
 FROM alpine:latest
 
-# Install necessary packages
-RUN apk add --no-cache tcpdump
+RUN apk update && apk add netcat-openbsd
 
-# Create directory to store captured data
-RUN mkdir /data
+EXPOSE 1234
 
-# Set tcpdump command to continuously capture packets and write to a file
-CMD ["tcpdump", "-i", "eth0", "-w", "/data/captured_packets.pcap"]
+#CMD nc -l -p 1234 -k | while read line; do echo "Packet received"; done
+#make the container run forever
+CMD tail -f /dev/null
