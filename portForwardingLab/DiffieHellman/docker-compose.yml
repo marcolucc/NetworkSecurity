@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  alice:
+    build: ./alice
+    volumes:
+      - ./alice:/app
+    networks:
+      dh_network:
+        ipv4_address: 172.28.0.2
+
+  bob:
+    build: ./bob
+    volumes:
+      - ./bob:/app
+    networks:
+      dh_network:
+        ipv4_address: 172.28.0.3
+
+networks:
+  dh_network:
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.28.0.0/16

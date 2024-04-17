@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  # Random service container 
+  frontend:
+    build: frontend    
+    #ports:
+    #- 8080:80
+    depends_on:
+    - backend
+
+  backend:
+    build: backend
+
+  curler:
+    image: appropriate/curl
+    depends_on:
+      - frontend
+    command: /bin/sh -c "while true; do curl frontend:80; sleep 1; done"

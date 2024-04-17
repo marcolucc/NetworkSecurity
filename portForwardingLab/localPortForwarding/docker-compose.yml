@@ -1,0 +1,38 @@
+version: "3.8"
+
+services:
+  server:
+    build: sshserver  
+    ports:
+      - "2222:22"
+
+
+  # Random service container 
+  frontend:
+    build: frontend    
+    #ports:
+    #- 8080:80
+    depends_on:
+    - backend
+
+  backend:
+    build: backend
+
+
+
+# Accessing the containers
+# 1. Run docker-compose up -d to start the containers in detached mode
+# 2. Use the following command for local port forwarding with SSH:
+# ssh -p 2222 user@localhost -L 80:random-service:9090
+
+# Explanation:
+# - We define two services: server and random-service.
+# - The server container exposes port 22 (SSH) on the host machine at port 2222 for security reasons (avoiding conflicts with existing SSH).
+# - The random-service container exposes port 80 (default for web services) on the host machine at port 9090.
+# - The volumes section is optional, use it if your random service needs persistent data.
+# - Instructions are provided to run the containers and use the `ssh` command with local port forwarding.
+#   - `-p 2222:22` specifies the host port (2222) to map to the container's SSH port (22).
+#   - `user@localhost` specifies the user with SSH access on the server container (change user if needed).
+#   - `-L 80:random-service:9090` sets up local port forwarding:
+#     - Maps host port 80 to the container named "random-service" on port 9090.
+#     - This allows you to access your random service running in the container by visiting `http://localhost:80` in your browser.

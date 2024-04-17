@@ -1,0 +1,59 @@
+<mxfile host="app.diagrams.net" modified="2024-04-04T10:44:11.255Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="wOJjvwZAR0UM3UIB6-tn" version="22.1.18" type="device">
+  <diagram name="Pagina-1" id="xGPbCDdFA1xePU1nhQpM">
+    <mxGraphModel dx="997" dy="750" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ulZudvsyo2AEAEUTXorU-6" value="" style="rounded=0;whiteSpace=wrap;html=1;gradientColor=none;gradientDirection=east;fillColor=#2BFF24;fillStyle=dashed;" vertex="1" parent="1">
+          <mxGeometry x="410" y="190" width="330" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="ulZudvsyo2AEAEUTXorU-1" value="" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;fillColor=#ff0000;fillStyle=dashed;" vertex="1" parent="1">
+          <mxGeometry x="1170" y="190" width="170" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="ulZudvsyo2AEAEUTXorU-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ulZudvsyo2AEAEUTXorU-2" target="ulZudvsyo2AEAEUTXorU-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ulZudvsyo2AEAEUTXorU-5" value="Forwards traffic to&lt;br&gt;Backend over HTTP" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ulZudvsyo2AEAEUTXorU-4">
+          <mxGeometry x="-0.18" y="-5" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ulZudvsyo2AEAEUTXorU-3" value="&lt;font color=&quot;#000000&quot;&gt;GoLang Backend&lt;br&gt;-port 80&lt;br&gt;&lt;/font&gt;" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;fontColor=#4277BB;labelBackgroundColor=default;fontSize=12;spacingTop=3;image=img/lib/ibm/infrastructure/mobile_backend.svg;" vertex="1" parent="1">
+          <mxGeometry x="440" y="244" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ulZudvsyo2AEAEUTXorU-2" value="NginX Frontend&lt;br&gt;-port 80" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=none;fillColor=#00BEF2;shape=mxgraph.azure.website_generic;pointerEvents=1;" vertex="1" parent="1">
+          <mxGeometry x="650" y="253.75" width="50" height="42.5" as="geometry" />
+        </mxCell>
+        <mxCell id="ulZudvsyo2AEAEUTXorU-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ulZudvsyo2AEAEUTXorU-8" target="ulZudvsyo2AEAEUTXorU-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ulZudvsyo2AEAEUTXorU-18" value="Request port 1234&lt;br&gt;of the remote server" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="ulZudvsyo2AEAEUTXorU-17">
+          <mxGeometry x="0.0917" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ulZudvsyo2AEAEUTXorU-8" value="Client&lt;br&gt;" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.management_console;fillColor=#D2D3D3;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="1218.5" y="231" width="63" height="63" as="geometry" />
+        </mxCell>
+        <mxCell id="ulZudvsyo2AEAEUTXorU-9" value="Remote&lt;br&gt;ssh server&lt;br&gt;-port 22&lt;br&gt;-port 1234" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#ED7100;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.ec2;" vertex="1" parent="1">
+          <mxGeometry x="940" y="237" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ulZudvsyo2AEAEUTXorU-10" value="Private Network&lt;br&gt;Allowed port 22" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="520" y="360" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ulZudvsyo2AEAEUTXorU-12" value="Client Home Network" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1180" y="360" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ulZudvsyo2AEAEUTXorU-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="300" y="280" as="sourcePoint" />
+            <mxPoint x="300" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ulZudvsyo2AEAEUTXorU-16" value="SSH TUNNEL" style="rounded=1;whiteSpace=wrap;html=1;strokeColor=default;fillStyle=dashed;fillColor=#3333FF;" vertex="1" parent="1">
+          <mxGeometry x="760" y="264" width="160" height="20" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
